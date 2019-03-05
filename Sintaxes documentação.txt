@@ -1,0 +1,14 @@
+Soma e atribuição (+=) :
+    Efetua a somatória e, em seguida, a atribuição. Ex.: a+=y → a=a+y
+    
+Subtração e atribuição (-=) :
+    Aplica a subtração de valor e a atribuição na sequência. Ex.: s-=y → s=s-y
+
+Multiplicação e atribuição (*=) :
+    Realiza a multiplicação de valores e, na sequência, a atribuição. Ex.: m*=y → m = m*y
+
+Divisão e atribuição (/=) :
+ Efetua a divisão entre os valores e, em seguida, a atribuição. Ex: d/=y => d = d/y
+
+Resto e atribuição (%=)
+    Aplica a divisão com o armazenamento do resto e a atribuição. Ex: r %= y => r = r%y
