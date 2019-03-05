@@ -1,0 +1,8 @@
+O método confirm exibe uma caixa de diálogo com dois botões:
+    -Ok
+    -Cancelar.
+Isso permite ao usuário tomar uma decisão:
+    -Se for selecionado OK, a condição lógica retorna o valor lógico true.
+    -Se for selecionado Cancelar, a condição lógica retorna o valor lógico false.
+Veja a sintaxe do método confirm:
+    variável = window.confirm(‘mensagem’);

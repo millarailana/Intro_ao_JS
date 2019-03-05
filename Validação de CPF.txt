@@ -1,0 +1,141 @@
+<script LANGUAGE=”JavaScript“>
+<!–
+function Verifica_CPF(formulario) {
+var CPF = formulario.CPF.value; // Recebe o valor digitado no campo
+
+// Verifica se o campo é nulo
+if (CPF == ”) {
+  alert(‘Este campo é de preenchimento obrigatório!’);
+  return false;
+   }
+
+// Aqui começa a checagem do CPF
+var POSICAO, I, SOMA, DV, DV_INFORMADO;
+var DIGITO = new Array(10);
+DV_INFORMADO = CPF.substr(9, 2); // Retira os dois últimos dígitos do número informado
+
+// Desemembra o número do CPF na array DIGITO
+for (I=0; I<=8; I++) {
+  DIGITO[I] = CPF.substr( I, 1);
+}
+
+// Calcula o valor do 10º dígito da verificação
+POSICAO = 10;
+SOMA = 0;
+   for (I=0; I<=8; I++) {
+      SOMA = SOMA + DIGITO[I] * POSICAO;
+      POSICAO = POSICAO – 1;
+   }
+DIGITO[9] = SOMA % 11;
+   if (DIGITO[9] < 2) {
+        DIGITO[9] = 0;
+}
+   else{
+       DIGITO[9] = 11 – DIGITO[9];
+}
+
+// Calcula o valor do 11º dígito da verificação
+POSICAO = 11;
+SOMA = 0;
+   for (I=0; I<=9; I++) {
+      SOMA = SOMA + DIGITO[I] * POSICAO;
+      POSICAO = POSICAO – 1;
+   }
+DIGITO[10] = SOMA % 11;
+   if (DIGITO[10] < 2) {
+        DIGITO[10] = 0;
+   }
+   else {
+        DIGITO[10] = 11 – DIGITO[10];
+   }
+
+// Verifica se os valores dos dígitos verificadores conferem
+DV = DIGITO[9] * 10 + DIGITO[10];
+   if (DV != DV_INFORMADO) {
+      alert(‘CPF inválido’);
+      formulario.CPF.value = ”;
+      formulario.CPF.focus();
+      return false;
+   }
+}
+//–>
+</script>
+Esta função deverá estar na seção ou da página.
+Para utilizar esta função, é só criar um campo de nome “CPF” no seu formulário, e quando for enviar os dados do formulário, chamar a função, como no exemplo abaixo:
+<form NAME=”Formulario” onSubmit=”return Verifica_CPF(this)“>
+<tt><p>
+<small><font face=”Verdana“>CPF: <input TYPE=”text” NAME=”CPF” SIZE=”15“>
+<br><br>
+<input TYPE=”submit” VALUE=”Testar CPF“> </font></small></tt></p>
+</form>
+
+
+(Somente imagem)
+
+
+CPF: 
+
+Outra variação que podemos fazer é assim que o usuário acaba de sair do campo de CPF e passar para o próximo campo, chamar a função Verifica_campo_CPF, através do evento onBlur. Aqui não checamos se o campo é vazio (o que deve ser feito por uma função a nível de formulário quando submeter os dados) Neste caso temos que fazer uma pequena alteração na nossa função, pois o parâmetro passado agora não é a identificação do formulário, mas de um campo. Vamos ver o exemplo:
+<script LANGUAGE=”JavaScript“>
+<!–
+function Verifica_campo_CPF(campo) {
+var CPF = campo.value; // Recebe o valor digitado no campo
+
+// Aqui começa a checagem do CPF
+var POSICAO, I, SOMA, DV, DV_INFORMADO;
+var DIGITO = new Array(10);
+DV_INFORMADO = CPF.substr(9, 2); // Retira os dois últimos dígitos do número informado
+
+// Desemembra o número do CPF na array DIGITO
+for (I=0; I<=8; I++) {
+  DIGITO[I] = CPF.substr( I, 1);
+}
+
+// Calcula o valor do 10º dígito da verificação
+POSICAO = 10;
+SOMA = 0;
+   for (I=0; I<=8; I++) {
+      SOMA = SOMA + DIGITO[I] * POSICAO;
+      POSICAO = POSICAO – 1;
+   }
+DIGITO[9] = SOMA % 11;
+   if (DIGITO[9] < 2) {
+        DIGITO[9] = 0;
+}
+   else{
+       DIGITO[9] = 11 – DIGITO[9];
+}
+
+// Calcula o valor do 11º dígito da verificação
+POSICAO = 11;
+SOMA = 0;
+   for (I=0; I<=9; I++) {
+      SOMA = SOMA + DIGITO[I] * POSICAO;
+      POSICAO = POSICAO – 1;
+   }
+DIGITO[10] = SOMA % 11;
+   if (DIGITO[10] < 2) {
+        DIGITO[10] = 0;
+   }
+   else {
+        DIGITO[10] = 11 – DIGITO[10];
+   }
+
+// Verifica se os valores dos dígitos verificadores conferem
+DV = DIGITO[9] * 10 + DIGITO[10];
+   if (DV != DV_INFORMADO) {
+      alert(‘CPF inválido’);
+      campo.value = ”;
+      campo.focus();
+      return false;
+   }
+}
+//–>
+</script>
+<form NAME=”Formulario2” >
+<tt><p>
+<small><font face=”Verdana“>CPF : <input TYPE=”text” NAME=”CPF” SIZE=”15“
+onBlur=”Verifica_campo_CPF(this)“>
+<br><br>
+<input TYPE=”submit” VALUE=”Testar CPF“> </font></small></tt></p>
+</form>

@@ -1,0 +1,18 @@
+O operador ternário JavaScript (representado por ?:) pode ser usado como atalho da instrução condicional 
+if...else. O que teremos, nesse caso, será um operador condicional ternário ?: e uma variante de if...else.
+Muito semelhante à instrução if...else, trata-se de uma forma mais simples de executar uma sentença lógica
+dependendo do resultado.
+
+Em geral, o operador ternário é aplicado como parte de uma expressão maior, quando uma instrução if...else
+for impraticável. 
+Vejamos:
+    [elemento condicional a testar] ? [resultado se verdadeiro] : [resultado se não verdadeiro ]
+Ou então:
+    (<condição>) ? <expressão para resultado verdadeiro> : <expressão para resultado falso>
+
+Exemplo: 
+var num = 30; <- valor atribuido
+num == 20 ? 'sim' : 'não' // retorna 'não' porque num = 30
+num != 20 ? 'sim' : 'não' // retorna 'sim‘ porque num = 30 
+num < 50 ? 'sim' : 'não' // retorna 'sim' porque num = 30
+(num – 20) == 0 ? 'sim' : 'não' // retorna 'não' porque num = 30, e num-20 resultaria em 10

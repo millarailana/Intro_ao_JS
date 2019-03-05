@@ -1,0 +1,17 @@
+O método toLowerCase(), ao contrário do método toUpperCase(), converte todas as letras de uma 
+string para letras minúsculas.
+A sintaxe desse método é a seguinte:
+    variável.toLowerCase() => js_cursodig.toLowerCase()
+
+Consideremos agora, os seguintes itens:
+    -js_cursodig == ‘Sist’ (informação digitada no formulário)
+    -js_cursoBD == ‘sist’ (informação armazenada no Banco de Dados).
+Aplicando o método de conversão para minúscula:
+
+Se js_cursodig == ‘Sist’ e, na memória de um Banco de Dados, estiver armazenado js_cursoBD == ‘sist’, 
+o sistema não executará o processamento como esperado, O resultado lógico é falso pois js_cursodig não é 
+igual a js_cursoBD.
+Para converter todos os caracteres ‘Sist’ para minúsculo (‘sist’) e tornar a comparação verdadeira, 
+o método toLowerCase() será agregado ao comando.
+    js_cursodig.toLowerCase() == ‘Sist’
+    → será convertido para ‘sist’ para comparação.

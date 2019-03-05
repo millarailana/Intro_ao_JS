@@ -1,0 +1,23 @@
+O método toUpperCase() é aplicado para converter uma informação literal escrita em letras minúsculas 
+ou mistas para letras maiúsculas.
+
+A sintaxe desse método é a seguinte:
+    variável.toUpperCase() => js_cursodig.toUpperCase()
+
+Quando utilizado junto com uma variável js_cursodig – por exemplo, js_cursodig.toUpperCase() – na linha 
+de condição, o método toUpperCase()  realiza a conversão de todas as letras da string para letras maiúsculas.
+Todo o texto digitado pelo usuário em determinado campo com valor literal é interpretado como se as letras 
+estivessem sido digitadas em maiúsculo. Isso evita divergências e resultados equivocados quando comparados 
+com valores de outros campos, por meio de um operador relacional ou de comparação == (igual a), 
+!= (diferente de).
+Considere, por exemplo, os seguintes itens:
+    -js_cursodig == ‘Sist’ (informação digitada no formulário)
+    -js_cursoBD == ‘SIST’ (informação armazenada no Banco de Dados).
+Aplicando o método de conversão para maiúscula:
+Se js_cursodig == ‘Sist’ e, na memória de um Banco de Dados, estiver armazenado js_cursoBD == ‘SIST’, 
+o sistema não executará o processamento como esperado. O resultado lógico é falso pois js_cursodig não 
+é igual a js_cursoBD.
+Para converter todos os caracteres ‘Sist’ para maiúsculo (‘SIST’) e tornar a comparação verdadeira, 
+o método toUpperCase() será agregado ao comando.
+    js_cursodig.toUpperCase() == ‘Sist’
+    → será convertido para ‘SIST’ para comparação.
