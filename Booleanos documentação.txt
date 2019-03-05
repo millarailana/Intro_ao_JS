@@ -1,0 +1,37 @@
+conjunção (e - &&) :
+    Uma conjunção (.e.), representada na linguagem JavaScript pela simbologia &&, é a busca por um resultado 
+    verdadeiro por meio da validação de todos os elementos condicionais. 
+    Por exemplo:
+        if (curso=='DS' && turma!= 0) {
+            window.alert(‘Ola Mundo!’);
+        }
+    No exemplo apresentado, temos o operador lógico de conjunção && (.e.) determinando que, por meio de uma
+    decisão condicional SE (if), a mensagem ‘Ola Mundo!’ só será apresentada se curso for igual (==) a ‘DS’ 
+    e (&&) turma for diferente de (!=) 0 (zero). 
+    Isso quer dizer que as duas condições (curso e turma) devem apresentar resultados verdadeiros para que a 
+    mensagem seja exibida. Caso contrário, a condição não é executada.
+
+disjunção (ou - ||)
+    Uma disjunção (.ou.), representada na linguagem JavaScript pela simbologia ||, é a busca por um resultado 
+    verdadeiro por meio da validação de, pelo menos, um dos elementos condicionais. 
+    Por exemplo:
+        if (curso==’DS’ || turma== 1) {
+            window.alert(‘Ola Mundo!’);
+        }
+    Nesse caso, o operador lógico || (.ou.) de disjunção determina que, por meio de uma decisão condicional SE 
+    (if), a mensagem ‘Ola Mundo!’ será apresentada se curso for igual (==) a ‘DS’ ou (||) turma for igual a (==) 
+    1 (um).
+    Isso quer dizer que, pelo menos, uma das condições (curso ou turma) deve apresentar resultado verdadeiro para 
+    que a mensagem seja exibida. Caso contrário, a condição não é executada.
+
+negação (não - !)
+    Uma negação (.não.), representada na linguagem JavaScript pela simbologia !, é a busca por um resultado 
+    verdadeiro por meio da validação invertida do elemento condicional ou dos elementos condicionais. 
+    Por exemplo:
+        if ( !(curso==’DS’) ) {
+            window.alert(‘Ola Mundo!’);
+        }
+    Nesse exemplo, o operador lógico ! (.não.) de negação determina que, por meio de uma decisão condicional SE 
+    (if) invertida, a mensagem ‘Ola Mundo!’ será apresentada se curso for não (!) igual (==) a ‘DS’, isto é, se 
+    o curso não for ‘DS’, a mensagem será exibida. Caso contrário, a condição não será verdadeira e, 
+    consequentemente, não executada.
