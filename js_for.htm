@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>js04__for.htm – incondicional for</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script language="Javascript">
+
+/* Objetivo: Aplicação do Laço Incondicional <for>, incrementando +2 na variável js_num e apresentando os
+valores acumulados de 1 a 10.
+*/
+/* Definicao das variaveis */
+var js_num;
+        document.write('<p>Apresentação dos valores acumulados para js_num=1 e menor ou igual a 10 incrementando a variável de += 2: ');
+document.write('<p>(Note que o limite irá até 9, pois 9+2=11, portanto será maior do que 10)');
+        /* Aplicação do Laço Incondicional - for */
+        for (js_num = 1; js_num <= 10; js_num += 2) {
+            document.write('<p>' + js_num);
+        }
+
+/*
+    EXPLICAÇÃO DO CÓDIGO SEQUENCIALMENTE
+- No primeiro laço for (para) a variável js_A recebe o valor inicial 1.
+- Em seguida, temos a primeira condição: js_A<=5. Para js_A<=5 verdadeiro, segue para o próximo comando.
+- Encontramos então o segundo laço for de repetição.
+- A variável js_B recebe o valor inicial 1.
+- Temos a segunda condição: js_B<=3. Para js_B<=3 verdadeiro, segue para o próximo comando.
+- O valor armazenado em js_B é apresentado pelo comando document.write.
+- Com todos os comandos do bloco {...} executados, o loop for retorna ao início do segundo laço for.
+- O valor de js_B é incrementado de 1.
+- O segundo laço for repete a condição: js_B<=3. Enquanto verdadeiro, o bloco de comandos para esta condição
+é executado (repete-se linhas 6 a 9).
+- No caso de js_B<=3 não ser verdadeiro: Para js_B<=3 falso, o segundo laço for é definitivamente finalizado.
+- Seguimos para o próximo comando fora do bloco do segundo laço for.
+- O valor armazenado em js_A é apresentado pelo comando document.write.
+- Sem mais comandos na sequência, o loop for retorna ao início do primeiro laço for.
+- O valor de js_A é incrementado de 1.
+- O primeiro laço for repete a condição: js_A<=5. Enquanto verdadeiro, o bloco de comandos para esta condição
+é executado (repete-se linhas 12 a 15).
+- No caso de js_A<=5 não ser verdadeiro: Para js_A<=5 falso, o js_A<=5 é definitivamente finalizado.
+*/
+
+    </script>
+</body>
+
+</html>
